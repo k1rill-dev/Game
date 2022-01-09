@@ -8,9 +8,16 @@ namespace Game
 {
     internal interface ISetting
     {
-        string Name { get; }
-        int Hp { get; }
+        // не знаю зачем, не знаю почему здесь интерфейс. Но как говорится, работает - не трожь
+        string Name { get; set; }
+        int Hp { get; set; }
+        int Damage { get; set; }
         void Death();
         string SayHello();
+
+        void GetDamage(int damage)
+        {
+            Hp -= damage;
+        }
     }
 }
