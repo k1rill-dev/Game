@@ -17,17 +17,12 @@ namespace Game
         public int Money { get; set; } = 10000;
         public Enemy enemy { get; set; } = null!;
         int ISetting.Damage { get; set; } = 5;
-
-        //public Player()
-        //{
-        //    Inventory = new List<string>();
-        //}
-
         public string SayHello() => $"Твое имя - {Name}";
-        public void Death() => Console.WriteLine("Ti sdoh popusk ebany");
+        public void Death() => Console.WriteLine("Ты умер");
         public void GetDamage(int damage)
         {
             Hp -= damage;
         }
+
     }
 }

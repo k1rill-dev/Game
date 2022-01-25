@@ -4,13 +4,6 @@ namespace Game
     internal class Torgovets : NPC
     {
         // класс торговца, где реализована(коряво, но реализована!) логика торговли
-        public string Sword { get; set; } = "Меч-ваншот";
-        public string Potion { get; set; } = "Зелье восстановления";
-        public int Player_money { get; set; }
-        
-        private Player player = new Player();
-        
-        public List<string> bought_items = new List<string>();
         public Torgovets()
         {
             Name = "Васен";
@@ -18,7 +11,13 @@ namespace Game
             Hp = 100;
             Player_money = player.Money;
         }
+        public string Sword { get; set; } = "Меч-ваншот";
+        public string Potion { get; set; } = "Зелье восстановления";
+        public int Player_money { get; set; }
+        private Player player = new Player();
 
+        public List<string> bought_items = new List<string>();
+        
         public override void SayHi()
         {
             base.SayHi();
@@ -32,7 +31,7 @@ namespace Game
             if (player != null)
             {
                 if (Player_money < 1000)
-                    Console.WriteLine("У тебя денег, будешь чем платить? Налом, безналом или?..");
+                    Console.WriteLine("У тебя денег, будешь чем платить? Налом, безналом или другим способом?)");
                 Console.WriteLine("У меня в наличии: а) Меч(100 монет)" +
                     "\n б)Зелье восстановления(10 монет)" +
                     "\n(а/б для покупки)");
@@ -57,7 +56,7 @@ namespace Game
                 }
             }
             else
-                Console.WriteLine("налл - аналл");
+                Console.WriteLine("где то тут ошибка(");
             
         }
     }

@@ -5,7 +5,6 @@ Player player = new Player();
 Enemy enemy = new Enemy();
 Torgovets torgash = new Torgovets();
 
-Console.WriteLine("");   
 
 Console.WriteLine("Введи имя героя");
 
@@ -51,7 +50,7 @@ else if (player.Hp > 0 && enemy.Hp <= 0)
         Console.WriteLine(player.Money);
     }
     else
-        Console.WriteLine("Ну ладно, аливедрочи");
+        Console.WriteLine("Ну ладно, аливедерчи");
 }
 
 delegate void DeathHandler();
