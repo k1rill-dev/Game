@@ -53,6 +53,8 @@ else if (player.Hp > 0 && enemy.Hp <= 0)
         Console.WriteLine("Ну ладно, аливедерчи");
 }
 
+Console.ReadKey();
+
 delegate void DeathHandler();
 delegate void TradingHandler();
 
